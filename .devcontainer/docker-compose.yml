@@ -34,4 +34,5 @@
       environment:
         POSTGRES_PASSWORD: postgres
         POSTGRES_USER: postgres
-   
+      volumes:
+        - ./../data/db:/var/lib/postgresql/data
