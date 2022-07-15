@@ -11,8 +11,7 @@ RUN apt-get install --yes build-essential inotify-tools postgresql-client wget
 # Install Phoenix packages
 RUN mix local.hex --force
 RUN mix local.rebar --force
-RUN wget https://github.com/phoenixframework/archives/raw/master/phx_new.ez
-RUN mix archive.install --force phx_new.ez
+RUN mix archive.install hex phx_new
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
